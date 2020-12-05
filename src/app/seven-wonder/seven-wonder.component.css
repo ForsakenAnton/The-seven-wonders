@@ -1,0 +1,36 @@
+h1 {
+    /* margin: auto; */
+    text-align: center;
+}
+
+img {
+    height: 100px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .beforeAfter:before, .beforeAfter:after {
+    content: "";
+    display: table;
+    text-align: center;
+    /* margin: auto; */
+}
+
+.beforeAfter:after{
+    clear: both;
+}
+
+.floatLeft {
+    float: left;
+    margin: 10px;
+}
+
+button {
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+     background-color: orange;
+     
+     margin: auto;
+     margin-bottom: 20px;
+}

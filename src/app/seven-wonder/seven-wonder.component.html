@@ -1,0 +1,26 @@
+<h1>Семь новых чудес света</h1>
+<p>Картинки ниже - кликабельные</p>
+
+<div id="mainContainer" class="beforeAfter">
+    <div [id]="'container'+ wonder.id" *ngFor="let wonder of mySevenWonders" class="floatLeft" [ngClass]="{divDetails: isDivDetails}">
+        <h2 [id]="'title' + wonder.id" [ngClass]="{invisibleChildren: isChildrenVisibility}">{{wonder.title}}</h2>
+        <img [id]="wonder.id" [src]="wonder.imagePath" [ngClass]="{imgDetails: isImgDetails}" (click)="onClickMoreInfo($event)" > <!-- (click)="onClickChangeStyleElements()" -->
+        <p [id]="'description' + wonder.id" [ngClass]="{invisibleChildren: isChildrenVisibility}">{{wonder.description}}</p>
+        <button [id]="'button' + wonder.id " [ngClass]="{invisibleChildren: isChildrenVisibility}" (click)="onClickBack()" >Назад к списку</button> <!-- (click)="onClickChangeStyleElements()" -->
+    </div>
+</div>
+
+<!-- (click)="onClickChangeStyleElements()" -->
+<!-- <button (click)="onClickChangeStyleElements()">Details</button> -->
+
+<!-- <div id="mainContainer" class="beforeAfter">
+    <div [id]="'container'+ wonder.id" *ngFor="let wonder of mySevenWonders" class="floatLeft" [ngClass]="{divDetails: isDivDetails}">
+        <h2 [id]="'title' + wonder.id" [ngClass]="{invisibleChildren: isChildrenVisibility}">{{wonder.title}}</h2>
+        <img [id]="wonder.id" [src]="wonder.imagePath" [ngClass]="{imgDetails: isImgDetails}" (click)="onClickMoreInfo($event)" (click)="onClickImgDetails()" (click)="onClickChildrenVisibility()" (click)="onClickDivDetails()">
+        <p [id]="'description' + wonder.id" [ngClass]="{invisibleChildren: isChildrenVisibility}">{{wonder.description}}</p>
+        <button [id]="'button' + wonder.id " [ngClass]="{invisibleChildren: isChildrenVisibility}" (click)="onClickImgDetails()" (click)="onClickChildrenVisibility()" (click)="onClickDivDetails()">Назад к списку</button>
+    </div>
+</div> -->
+
+<!-- <button (click)="onClickChildrenVisibility()">Hidden</button>
+<button (click)="onClickDivDetails()">Details</button> -->
